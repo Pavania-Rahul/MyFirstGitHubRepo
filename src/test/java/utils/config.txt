@@ -1,0 +1,11 @@
+userName=Rahul
+url=https://demo.automationtesting.in/Register.html
+lastName=Test
+address = A8 Near Meta town Delhi-38087
+mobileNumber=9999991221
+selectRadioButton=FeMale
+emailAddress=test22@mailinator.com
+selctCheckBox=Hockey
+selectLanguage=German
+selectSkills=AutoCAD
+selectCountry=India
