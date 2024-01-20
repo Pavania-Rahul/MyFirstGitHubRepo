@@ -24,5 +24,4 @@ public class Locator extends Util {
 	public static By selectCountryDropDown=By.xpath("//span[@aria-labelledby='select2-country-container']");
 	public static By listOfCountry=By.xpath("//ul[@class='select2-results__options']/li");
 	public static By selectedCountry=By.xpath("//span[@aria-labelledby='select2-country-container']/span[1]");
-	public static By selectedCountry1=By.xpath("//span[@aria-labelledby='select2-country-container']/span[1]");
 }
