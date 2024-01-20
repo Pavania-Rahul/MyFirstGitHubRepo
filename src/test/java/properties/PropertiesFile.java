@@ -14,7 +14,8 @@ public class PropertiesFile {
 		FileInputStream fileInputStream = null;
 		Properties properties;
 		
-		File file = new File("C:\\Users\\admin\\eclipse-workspace\\test\\src\\test\\java\\utils\\config.txt");
+		File file = new File(System.getProperty("user.dir")+"\\src\\test\\java\\utils\\config.txt");
+		System.out.println(file);
 		
 		
 		try {
