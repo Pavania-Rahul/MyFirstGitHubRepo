@@ -128,9 +128,4 @@ public class Util {
 	}
 	
 	
-	@AfterTest
-	public void tear() {
-		driver.quit();
-	}
-
 }
