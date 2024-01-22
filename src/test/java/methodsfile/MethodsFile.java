@@ -67,7 +67,7 @@ public class MethodsFile extends Util {
 	public void SelectCountryFromTheDropDown(String enterTextToSelect){
 	    click(Locator.selectCountryDropDown);
 		waitUntilIsElementVisible(Locator.listOfCountry);
-		scrollUntilTheElementIsVisible(Locator.listOfCountry);
+		scrollUntilTheElementTheTextIsVisible(Locator.listOfCountry, enterTextToSelect);
 		selectTheValueUsingTheText(Locator.listOfCountry, enterTextToSelect);
 	}
 	
