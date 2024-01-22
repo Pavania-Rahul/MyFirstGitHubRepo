@@ -16,7 +16,7 @@ public class DemoClass {
 
 	@Test
 	public void test() {
-
+		
 		method = new MethodsFile();
 		method.launchTheBrowser(p.getValueFromProperties("url"));
 		method.enterFirstName(p.getValueFromProperties("userName"));
@@ -29,8 +29,8 @@ public class DemoClass {
 		method.selectLanguage(p.getValueFromProperties("selectLanguage"));
 		Assert.assertEquals(method.verifySelectedLanguage(),p.getValueFromProperties("selectLanguage"),"Selcted Value is invalid");
 		method.selectSkills(p.getValueFromProperties("selectSkills"));
-//		method.SelectCountryFromTheDropDown(p.getValueFromProperties("selectCountry"));
-//		Assert.assertEquals(method.verifySelectedCountry(),p.getValueFromProperties("selectCountry"),"Selcted Value is invalid");
+		method.SelectCountryFromTheDropDown(p.getValueFromProperties("selectCountry"));
+		Assert.assertEquals(method.verifySelectedCountry(),p.getValueFromProperties("selectCountry"),"Selcted Value is invalid");
 
 	}
 

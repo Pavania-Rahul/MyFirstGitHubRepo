@@ -42,16 +42,18 @@ public class Util {
 	public void selectTheValueUsingTheText(By locator, String enterTextToSelect) {
 
 		waitUntilIsElementVisible(locator);
+		WebElement ele;
 		try {
 			List<WebElement> li = driver.findElements(locator);
 
 			for (int i = 0; i < li.size(); i++) {
 
-				WebElement ele = li.get(i);
+			     ele = li.get(i);
 				String getTextFromTheElement = ele.getText();
 
 				if (getTextFromTheElement.equalsIgnoreCase(enterTextToSelect)) {
 					ele.click();
+					break;
 				} else {
 					
 					System.out.println("Please check entered text is not available on the page");
@@ -77,6 +79,23 @@ public class Util {
 		WebElement ele = driver.findElement(locator);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView(true)", ele);
+
+	}
+	
+	
+	public void scrollUntilTheElementTheTextIsVisible(By locator, String text) {
+		String getText;
+		List<WebElement> elements = driver.findElements(locator);
+		for (WebElement ele : elements) {
+			getText = ele.getText();
+			if (getText.equalsIgnoreCase(text)) {
+				WebElement ele1 = driver.findElement(By.xpath("//li[text()='"+text+"']"));
+				JavascriptExecutor js = (JavascriptExecutor) driver;
+				js.executeScript("arguments[0].scrollIntoView(true)", ele1);
+				break;
+			}
+		 }
+	     
 
 	}
 
